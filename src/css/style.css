@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio--nav {
+    width: 100%;
+    background: #070707;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio--nav-logo {
+    color: white;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.portfolio--nav-logo a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+.portfolio--nav-burger {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.portfolio--nav-burger div {
+    width: 25px;
+    height: 2px;
+    color: white;
+    background: white;
+    margin-bottom: 5px;
+}
+
+.portfolio--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
+    transform: translateX(100%);
+    transition: all ease-in-out 0.7s;
+    cursor: pointer;
+    /*display: none;*/
+}
+
+.portfolio--sidebar {
+    width: 300px;
+    height: 100vh;
+    transform: translateX(300px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    border: 1px solid lightgray;
+    transition: all ease-in-out 0.7s;
+}
+
+.portfolio--nav-sidebar {
+    background: white;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.portfolio--nav-sidebar > * {
+    color: black;
+}
+
+.portfolio--nav-exit {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.portfolio--nav-exit-circle {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio--nav-exit-circle > div {
+    width: 15px;
+    height: 1px;
+    background: black;
+    position: absolute;
+
+}
+
+.portfolio--nav-exit-circle > div:first-child{
+    transform: rotate(45deg);
+}
+
+.portfolio--nav-exit-circle > div:last-child {
+    transform: rotate(135deg);
+}
+
+.portfolio--show {
+    transform: translateX(0);
+}
+
+
+

@@ -2,7 +2,7 @@
   "name": "ahmed",
   "version": "1.0.0",
   "description": "",
-  "main": "src/controler.js",
+  "main": "src/js/controller.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
