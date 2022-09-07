@@ -1,3 +1,6 @@
+/**************************************************************************************/
+/************************************* Global Variables *******************************/
+/**************************************************************************************/
 const burger = document.querySelector('.portfolio--nav-burger');
 const sidebar = document.querySelector('.portfolio--sidebar');
 const overlay = document.querySelector('.portfolio--overlay');
@@ -8,8 +11,12 @@ const header = document.querySelector('.portfolio--nav');
 const dummy = document.querySelector('.portfolio--dummy');
 const skillsContainer = document.querySelector('.portfolio--skills-container');
 const projectsContainer = document.querySelector('.portfolio--projects-container')
+const nodes = document.querySelectorAll('*');
+console.log(nodes);
 
-/****************************** HANDLE BURGER CLICK **********************/
+/***************************************************************************************/
+/****************************** HANDLE BURGER CLICK ************************************/
+/***************************************************************************************/
 burger.addEventListener('click', (e) => {
     overlay.classList.add('portfolio--show');
     setTimeout(() => {
@@ -26,7 +33,9 @@ burger.addEventListener('click', (e) => {
     }));
 });
 
-/************************************* Handling header scroll ************/
+/**************************************************************************************/
+/************************************* Handling header scroll *************************/
+/**************************************************************************************/
 const stickyNav = (entries) => {
     const [entry] = entries;
 
@@ -46,8 +55,9 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(dummy);
 
-
+/**************************************************************************************/
 /************************************* Handling Skills section ************************/
+/**************************************************************************************/
 const skills = [
     'HTML',
     'CSS',
@@ -65,7 +75,9 @@ skills.map(s => {
     skillsContainer.insertAdjacentHTML('beforeend', markup);
 });
 
+/**************************************************************************************/
 /***************************** Handling the Projects section **************************/
+/**************************************************************************************/
 const projects = [
     {
         name: 'messenger-clone',
@@ -88,6 +100,41 @@ const projects = [
         desc: 'spotify login and user interface.',
         skills: ['ReactJS', 'Redux', 'firebase']
     },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    }
 ];
 
 projects.map(p => {
@@ -114,5 +161,4 @@ projects.map(p => {
         const skillsMarkup = `<p>${s}</p>`
         footer.insertAdjacentHTML('beforeend', skillsMarkup)
     });
-
 });

@@ -175,7 +175,9 @@ body {
         padding-left: 0;
         padding-right: 0;
     }
+}
 
+@media (min-width: 400px) {
     .portfolio--sidebar {
         width: 300px;
     }
@@ -388,16 +390,27 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     text-align: start;
-    justify-content: space-around;
+    justify-content: start;
 }
 
 .portfolio--projects-project {
-    background: #133040;
+    background: rgb(20, 20, 20);
     width: 47%;
     margin-bottom: 20px;
+    margin-right: 10px;
     padding: 15px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: all ease-in-out 0.2s;
+}
+
+.portfolio--projects-project:hover {
+    transform: translateY(-5px) translateX(-5px);
+    border-radius: 0;
+    -moz-box-shadow: 5px 5px 0px 0px #FFFFFF;
+    -webkit-box-shadow: 5px 5px 0px 0px #FFFFFF;
+    box-shadow: 5px 5px 0px 0px  #FFFFFF;
 }
 
 .portfolio--projects-project a {
@@ -436,7 +449,7 @@ body {
 
 .portfolio--projects-project-footer * {
     margin-right: 5px;
-
+    font-size: 14px;
 }
 
 @media (min-width: 700px) {
@@ -466,3 +479,185 @@ body {
         width: 100%;
     }
 }
+
+/**************************************************************************************/
+/********************************* Handling contact ***********************************/
+/**************************************************************************************/
+.portfolio--contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.portfolio--contact * {
+    color: white;
+    margin-bottom: 20px;
+    font-family: "Zilla Slab", serif;
+}
+
+.portfolio--contact-container {
+    width: 100%;
+}
+
+.portfolio--contact-header span:first-child {
+    color: #5FF3D1;
+
+}
+
+.portfolio--contact-header span:last-child {
+    color: burlywood;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.portfolio--contact-info {
+    font-family: "Zilla Slab", serif;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.portfolio--contact-email {
+    width: 150px;
+    height: 50px;
+    background: #34A853;
+    transition: all ease-in-out 0.2s;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.portfolio--contact-email:hover {
+    background: green;
+}
+
+.portfolio--contact-email a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+}
+
+.portfolio--contact-email span {
+    color: white;
+    margin: 0;
+}
+
+@media (min-width: 700px) {
+    .portfolio--contact {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .portfolio--contact-container{
+        width: 80%;
+
+    }
+}
+
+/**************************************************************************************/
+/********************************** Handling Footer ***********************************/
+/**************************************************************************************/
+.portfolio--footer {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio--footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio--footer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.portfolio--footer-links ul {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.portfolio--footer-links ul * {
+    color: white;
+}
+
+.portfolio--footer-links ul a {
+    font-size: 25px;
+}
+
+.portfolio--footer-links ul a:hover > i {
+    color: #5FF3D1;
+}
+
+.portfolio--footer-copyright {
+    width: 50%;
+    color: white;
+    font-family: "Zilla Slab", serif;
+    text-align: center;
+    line-height: 2;
+}
+
+.portfolio--footer-copyright a {
+    text-decoration: none;
+    color: #34A853;
+    transition: all ease-in-out 0.2s;
+}
+
+.portfolio--footer-copyright a:hover {
+    color: #5FF3D1;
+    text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+    .portfolio--footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .portfolio--footer-container {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
