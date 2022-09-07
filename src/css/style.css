@@ -4,25 +4,56 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     width: 100%;
     height: 100%;
 }
 
+/************************************************************************************/
+/************************************ Handling Logo and Navigation ******************/
+/************************************************************************************/
+
 .portfolio--nav {
     width: 100%;
     background: #070707;
-    height: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all ease-in-out 0.5s;
+}
+
+.portfolio--nav--container-parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio--nav-container {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .portfolio--nav-logo {
     color: white;
     font-size: 40px;
-    margin-left: 40px;
+    /*margin-left: 40px;*/
 }
 
 .portfolio--nav-logo a {
@@ -34,7 +65,7 @@ body {
 .portfolio--nav-burger {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
+    /*margin-right: 40px;*/
     cursor: pointer;
 }
 
@@ -53,15 +84,16 @@ body {
     width: 100%;
     height: 100%;
     background: black;
-    opacity: 0.8;
+    opacity: 0.9;
     transform: translateX(100%);
     transition: all ease-in-out 0.7s;
     cursor: pointer;
+    z-index: 2000;
     /*display: none;*/
 }
 
 .portfolio--sidebar {
-    width: 300px;
+    width: 100%;
     height: 100vh;
     transform: translateX(300px);
     position: fixed;
@@ -70,12 +102,21 @@ body {
     background: white;
     border: 1px solid lightgray;
     transition: all ease-in-out 0.7s;
+    z-index: 2001;
+
 }
 
 .portfolio--nav-sidebar {
     background: white;
     color: black;
     border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portfolio--nav-sidebar > .portfolio--nav-logo {
+    margin-left: 20px;
 }
 
 .portfolio--nav-sidebar > * {
@@ -117,5 +158,76 @@ body {
     transform: translateX(0);
 }
 
+.sticky {
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    height: 60px;
+    background: #111;
+    width: 100%;
+}
+
+@media (min-width: 700px) {
+    .portfolio--nav-container {
+        width: 70%;
+    }
+
+    .portfolio--sidebar {
+        width: 300px;
+    }
+}
+
+
+/***********************************************************************************/
+/***************************** Handling About section ******************************/
+/***********************************************************************************/
+
+.portfolio--about {
+    width: 100%;
+    height: 820px;
+    background: #070707;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.portfolio--about-info {
+    font-family: "Zilla Slab", serif;
+    color: white;
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.portfolio--about-info > * {
+    margin-bottom: 20px;
+}
+
+.portfolio--about-info-greeting {
+    color: burlywood;
+
+}
+
+.portfolio--about-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 55%;
+    opacity: 0.9;
+}
+
+@media (min-width: 700px) {
+    .portfolio--about-info {
+        width: 70%;
+        font-size: 200%;
+    }
+}
 
 
