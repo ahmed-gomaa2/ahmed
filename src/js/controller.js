@@ -6,6 +6,7 @@ const body = document.querySelector("body");
 const about = document.querySelector('.portfolio--about');
 const header = document.querySelector('.portfolio--nav');
 const dummy = document.querySelector('.portfolio--dummy');
+const skillsContainer = document.querySelector('.portfolio--skills-container');
 
 /****************************** HANDLE BURGER CLICK **********************/
 burger.addEventListener('click', (e) => {
@@ -34,10 +35,6 @@ const stickyNav = (entries) => {
     else header.classList.remove('sticky');
 }
 
-// const navHeight = header.getBoundingClientRect().height;
-
-// console.log(navHeight)
-
 const headerObserver = new IntersectionObserver(stickyNav, {
     root: null,
     threshold: 0,
@@ -47,3 +44,22 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 
 headerObserver.observe(dummy);
+
+
+/************************************* Handling Skills section ************************/
+const skills = [
+    'HTML',
+    'CSS',
+    'Javascript',
+    'ReactJS',
+    'Redux',
+    'Redux-thunk',
+    'NodeJS',
+    'MySql',
+    'SocketIO'
+];
+
+skills.map(s => {
+    const markup = `<div class="portfolio--skills-skill"><span>▹</span>${s}</div>`;
+    skillsContainer.insertAdjacentHTML('beforeend', markup)
+})

@@ -29,7 +29,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.4s;
 }
 
 .portfolio--nav--container-parent {
@@ -95,7 +95,7 @@ body {
 .portfolio--sidebar {
     width: 100%;
     height: 100vh;
-    transform: translateX(300px);
+    transform: translateX(100%);
     position: fixed;
     top: 0;
     right: 0;
@@ -187,13 +187,30 @@ body {
     height: 820px;
     background: #070707;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding-top: 150px;
     padding-left: 20px;
     padding-right: 20px;
     position: relative;
     z-index: 5;
+}
+
+.portfolio--about-header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.portfolio--about-header span:first-child {
+    color: #5FF3D1;
+}
+
+.portfolio--about-header span:last-child {
+    color: burlywood;
+    font-weight: bold;
+    font-size: 120%;
 }
 
 .portfolio--about-info {
@@ -210,23 +227,118 @@ body {
 }
 
 .portfolio--about-info-greeting {
-    color: burlywood;
+    color: aqua;
 
 }
 
-.portfolio--about-img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    width: 55%;
-    opacity: 0.9;
+.portfolio--about-resume {
+    width: 200px;
+    height: 50px;
+    background: inherit;
+    border: 1px solid #5FF3D1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+
+.portfolio--about-resume:hover {
+    background: #133040;
+}
+
+.portfolio--about-resume a {
+    text-decoration: none;
+    color: #5FF3D1;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 700px) {
+    .portfolio--about {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .portfolio--about-header {
+        width: 70%;
+    }
     .portfolio--about-info {
         width: 70%;
         font-size: 200%;
+    }
+}
+
+
+/****************************************************************************/
+/************************** Handling Skills Section *************************/
+/****************************************************************************/
+.portfolio--skills {
+    width: 100%;
+    background: #070707;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.portfolio--skills * {
+    font-style: italic;
+    font-family: "Zilla Slab", serif;
+    color: white;
+}
+
+.portfolio--skills-header {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.portfolio--skills-header span:first-child {
+    color: #5FF3D1;
+}
+
+.portfolio--skills-header span:last-child {
+    color: burlywood;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.portfolio--skills-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.portfolio--skills-skill {
+    width: 50%;
+    font-size: 120%;
+    color: lightgreen;
+    font-weight: lighter;
+    font-family: "Zilla Slab", serif;
+    margin-bottom: 20px;
+}
+
+.portfolio--skills-skill span {
+    background: #070707;
+    margin-right: 5px;
+    color: #5FF3D1;
+}
+
+@media (min-width: 700px) {
+    .portfolio--skills {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .portfolio--skills-header {
+        width: 70%;
+    }
+    .portfolio--skills-container {
+        width: 70%;
     }
 }
 
