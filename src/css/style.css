@@ -203,7 +203,7 @@ body {
 }
 
 .portfolio--about * {
-    transition: all ease-in-out 0.4s;
+    transition: opacity,transform ease-in-out 0.4s;
 }
 
 .portfolio--about-header {
@@ -298,7 +298,6 @@ body {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 30px;
 }
 
 .portfolio--skills * {
