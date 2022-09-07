@@ -92,48 +92,6 @@ const projects = [
         github: 'https://github.com/ahmed-gomaa2/spotify.git',
         desc: 'spotify login and user interface.',
         skills: ['ReactJS', 'Redux', 'firebase']
-    },
-    {
-        name: 'Spotify-clone',
-        link: 'https://spotify-b41cc.web.app/',
-        github: 'https://github.com/ahmed-gomaa2/spotify.git',
-        desc: 'spotify login and user interface.',
-        skills: ['ReactJS', 'Redux', 'firebase']
-    },
-    {
-        name: 'Spotify-clone',
-        link: 'https://spotify-b41cc.web.app/',
-        github: 'https://github.com/ahmed-gomaa2/spotify.git',
-        desc: 'spotify login and user interface.',
-        skills: ['ReactJS', 'Redux', 'firebase']
-    },
-    {
-        name: 'Spotify-clone',
-        link: 'https://spotify-b41cc.web.app/',
-        github: 'https://github.com/ahmed-gomaa2/spotify.git',
-        desc: 'spotify login and user interface.',
-        skills: ['ReactJS', 'Redux', 'firebase']
-    },
-    {
-        name: 'Spotify-clone',
-        link: 'https://spotify-b41cc.web.app/',
-        github: 'https://github.com/ahmed-gomaa2/spotify.git',
-        desc: 'spotify login and user interface.',
-        skills: ['ReactJS', 'Redux', 'firebase']
-    },
-    {
-        name: 'Spotify-clone',
-        link: 'https://spotify-b41cc.web.app/',
-        github: 'https://github.com/ahmed-gomaa2/spotify.git',
-        desc: 'spotify login and user interface.',
-        skills: ['ReactJS', 'Redux', 'firebase']
-    },
-    {
-        name: 'Spotify-clone',
-        link: 'https://spotify-b41cc.web.app/',
-        github: 'https://github.com/ahmed-gomaa2/spotify.git',
-        desc: 'spotify login and user interface.',
-        skills: ['ReactJS', 'Redux', 'firebase']
     }
 ];
 
