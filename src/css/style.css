@@ -190,7 +190,7 @@ body {
 
 .portfolio--about {
     width: 100%;
-    height: 100vh;
+    height: 800px;
     background: #070707;
     display: flex;
     flex-direction: column;
@@ -242,8 +242,8 @@ body {
 }
 
 .portfolio--about-resume {
-    width: 200px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
     background: inherit;
     border: 1px solid #5FF3D1;
     border-radius: 5px;
@@ -283,6 +283,10 @@ body {
     .portfolio--about-info {
         width: 80%;
         font-size: 200%;
+    }
+    .portfolio--about-resume {
+        width: 200px;
+        height: 50px;
     }
 }
 
