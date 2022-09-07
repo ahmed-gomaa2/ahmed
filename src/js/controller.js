@@ -120,3 +120,41 @@ projects.map(p => {
         footer.insertAdjacentHTML('beforeend', skillsMarkup)
     });
 });
+
+/**************************************************************************************/
+/*************************************** Handling the scroll animation ****************/
+/**************************************************************************************/
+const aboutH = document.querySelector('.portfolio--about-header');
+const aboutI = document.querySelector('.portfolio--about-info');
+const aboutE = document.querySelector('.portfolio--about-resume');
+
+[aboutH, aboutI, aboutE].map(el => {
+    el.classList.add('fading');
+});
+
+setTimeout(() => {
+    [aboutH, aboutI, aboutE].map(el => {
+        el.classList.remove('fading');
+    });
+}, 200);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
