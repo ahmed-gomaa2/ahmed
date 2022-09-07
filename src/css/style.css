@@ -12,6 +12,8 @@ html {
 body {
     width: 100%;
     height: 100%;
+    background: #070707;
+
 }
 
 /************************************************************************************/
@@ -169,7 +171,9 @@ body {
 
 @media (min-width: 700px) {
     .portfolio--nav-container {
-        width: 70%;
+        width: 80%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .portfolio--sidebar {
@@ -184,7 +188,7 @@ body {
 
 .portfolio--about {
     width: 100%;
-    height: 820px;
+    height: auto;
     background: #070707;
     display: flex;
     flex-direction: column;
@@ -263,10 +267,10 @@ body {
     }
 
     .portfolio--about-header {
-        width: 70%;
+        width: 80%;
     }
     .portfolio--about-info {
-        width: 70%;
+        width: 80%;
         font-size: 200%;
     }
 }
@@ -283,6 +287,7 @@ body {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 30px;
 }
 
 .portfolio--skills * {
@@ -335,11 +340,129 @@ body {
         padding-left: 0;
     }
     .portfolio--skills-header {
-        width: 70%;
+        width: 80%;
     }
     .portfolio--skills-container {
-        width: 70%;
+        width: 80%;
     }
 }
 
 
+/*************************************************************************************/
+/************************** Handling the Projects section ****************************/
+/*************************************************************************************/
+.portfolio--projects {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.portfolio--projects * {
+    font-style: italic;
+    font-family: "Zilla Slab", serif;
+    color: white;
+}
+
+.portfolio--projects-header {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.portfolio--projects-header span:first-child {
+    color: #5FF3D1;
+}
+
+.portfolio--projects-header span:last-child {
+    color: burlywood;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.portfolio--projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+    justify-content: space-around;
+}
+
+.portfolio--projects-project {
+    background: #133040;
+    width: 47%;
+    margin-bottom: 20px;
+    padding: 15px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.portfolio--projects-project a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio--projects-project-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio--projects-project-header  i {
+    /*color: #111111;*/
+    /*border: 1px solid lightgreen;*/
+    color: #5FF3D1;
+    font-size: 25px;
+}
+
+.portfolio--projects-project-desc * {
+    margin-bottom: 20px;
+}
+
+.portfolio--projects-project-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.portfolio--projects-project-footer * {
+    margin-right: 5px;
+
+}
+
+@media (min-width: 700px) {
+    .portfolio--projects {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .portfolio--projects-header {
+        width: 80%;
+    }
+
+    .portfolio--projects-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .portfolio--projects-project {
+        width: 30%;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .portfolio--projects-project {
+        width: 100%;
+    }
+}

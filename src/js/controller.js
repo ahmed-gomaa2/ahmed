@@ -7,6 +7,7 @@ const about = document.querySelector('.portfolio--about');
 const header = document.querySelector('.portfolio--nav');
 const dummy = document.querySelector('.portfolio--dummy');
 const skillsContainer = document.querySelector('.portfolio--skills-container');
+const projectsContainer = document.querySelector('.portfolio--projects-container')
 
 /****************************** HANDLE BURGER CLICK **********************/
 burger.addEventListener('click', (e) => {
@@ -61,5 +62,57 @@ const skills = [
 
 skills.map(s => {
     const markup = `<div class="portfolio--skills-skill"><span>▹</span>${s}</div>`;
-    skillsContainer.insertAdjacentHTML('beforeend', markup)
-})
+    skillsContainer.insertAdjacentHTML('beforeend', markup);
+});
+
+/***************************** Handling the Projects section **************************/
+const projects = [
+    {
+        name: 'messenger-clone',
+        link: 'http://3.80.44.161/',
+        github: 'https://github.com/ahmed-gomaa2/massenger',
+        desc: 'Chat using test and images.',
+        skills: ['NodeJS', 'MySql', 'ReactJS', 'Redux', 'SocketIO']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+];
+
+projects.map(p => {
+    const markup = `<div class="portfolio--projects-project">
+                <a href=${p.link} target="_blank" class="portfolio--projects-project-container">
+                </a>
+            </div>`;
+    projectsContainer.insertAdjacentHTML('afterbegin', markup);
+    const link = document.querySelector('.portfolio--projects-project-container');
+    const linkMarkup = `<div class="portfolio--projects-project-header">
+                            <p><i class="fa-regular fa-folder"></i></p>
+                            <p><a target="_blank" href=${p.github}><i class="fa-brands fa-github"></i></a></p>
+                            <p><a target="_blank" href=${p.link}><i class="fa-solid fa-link"></i></a></p>
+                        </div>
+                        <div class="portfolio--projects-project-desc">
+                            <h4>${p.name}</h4>
+                            <p>${p.desc}</p>
+                        </div>
+                        <div class="portfolio--projects-project-footer">
+                        </div>`;
+    link.insertAdjacentHTML('beforeend', linkMarkup)
+    const footer = document.querySelector('.portfolio--projects-project-footer');
+    p.skills.map(s => {
+        const skillsMarkup = `<p>${s}</p>`
+        footer.insertAdjacentHTML('beforeend', skillsMarkup)
+    });
+
+});
