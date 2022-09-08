@@ -103,7 +103,7 @@ body {
     right: 0;
     background: white;
     border: 1px solid lightgray;
-    transition: all ease-in-out 0.7s;
+    transition: transform ease-in-out 0.7s;
     z-index: 2001;
 
 }
@@ -115,6 +115,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    align-items: center;
 }
 
 .portfolio--nav-sidebar > .portfolio--nav-logo {
@@ -163,6 +166,35 @@ body {
 
 .portfolio--show {
     transform: translateX(0);
+}
+
+.portfolio--sidebar-links {
+
+    height: calc(100% - 100px);
+}
+
+.portfolio--sidebar-link {
+    cursor: pointer;
+    height: 80px;
+    justify-content: flex-start;
+    transition: all .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.portfolio--sidebar-link:hover {
+    background: whitesmoke;
+}
+
+.portfolio--sidebar-link a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .sticky {
@@ -243,7 +275,6 @@ body {
 
 .portfolio--about-info-greeting {
     color: aqua;
-
 }
 
 .portfolio--about-resume {
@@ -272,8 +303,8 @@ body {
 }
 
 .fading {
+    transform: translateY(20px);
     opacity: 0;
-    transform: translateY(10px);
 }
 
 @media (min-width: 700px) {
@@ -308,6 +339,7 @@ body {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    transition: transform ease-in-out .3s, opacity ease-in-out .3s ;
 }
 
 .portfolio--skills * {
@@ -379,6 +411,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    transition: transform ease-in-out .3s, opacity ease-in-out .3s ;
 }
 
 .portfolio--projects * {
@@ -390,6 +423,7 @@ body {
 .portfolio--projects-header {
     width: 100%;
     margin-bottom: 30px;
+    transition: transform ease-in-out .3s, opacity ease-in-out .3s ;
 }
 
 .portfolio--projects-header span:first-child {
@@ -404,23 +438,26 @@ body {
 
 .portfolio--projects-container {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: start;
-    justify-content: start;
+    display: grid;
+    gap: 1.5rem;
+
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*text-align: start;*/
+    /*justify-content: start;*/
 }
 
 .portfolio--projects-project {
     background: rgb(20, 20, 20);
-    width: 47%;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    /*width: 47%;*/
+    /*margin-bottom: 20px;*/
+    /*margin-right: 10px;*/
     padding: 15px;
     height: 300px;
     border-radius: 5px;
     border: 1px solid white;
-    transition: all ease-in-out 0.2s;
+    transition: transform ease-in-out .3s, opacity ease-in-out .3s ;
 }
 
 .portfolio--projects-project:hover {
@@ -470,7 +507,14 @@ body {
     font-size: 14px;
 }
 
-@media (min-width: 700px) {
+@media only screen and (min-width: 500px) {
+    .portfolio--projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
     .portfolio--projects {
         padding-right: 0;
         padding-left: 0;
@@ -482,19 +526,14 @@ body {
 
     .portfolio--projects-container {
         width: 80%;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 1000px) {
-    .portfolio--projects-project {
-        width: 30%;
 
-    }
-}
-
-@media (max-width: 500px) {
-    .portfolio--projects-project {
-        width: 100%;
+@media only screen and (max-width: 499px) {
+    .portfolio--projects-container {
+        grid-template-columns: 100%;
     }
 }
 
@@ -509,6 +548,7 @@ body {
     margin-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
+    transition: transform ease-in-out .3s, opacity ease-in-out .3s ;
 }
 
 .portfolio--contact * {
@@ -589,6 +629,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform ease-in-out .3s, opacity ease-in-out .3s ;
+
 }
 
 .portfolio--footer-container {

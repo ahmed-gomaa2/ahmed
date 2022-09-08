@@ -11,8 +11,7 @@ const header = document.querySelector('.portfolio--nav');
 const dummy = document.querySelector('.portfolio--dummy');
 const skillsContainer = document.querySelector('.portfolio--skills-container');
 const projectsContainer = document.querySelector('.portfolio--projects-container')
-const nodes = document.querySelectorAll('*');
-console.log(nodes);
+const navLinks = document.querySelectorAll('.portfolio--sidebar-link');
 
 /***************************************************************************************/
 /****************************** HANDLE BURGER CLICK ************************************/
@@ -24,7 +23,7 @@ burger.addEventListener('click', (e) => {
     }, (500));
 });
 
-[overlay, exitBtn].map(el => {
+[overlay, exitBtn, ...navLinks].forEach(el => {
     el.addEventListener('click', (e => {
         sidebar.classList.remove('portfolio--show');
         setTimeout(() => {
@@ -49,7 +48,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
     root: null,
     threshold: 0,
     // rootMargin: `-${navHeight + 200}px`
-    rootMargin: `10px`
+    rootMargin: `100px`
 })
 
 
@@ -92,11 +91,60 @@ const projects = [
         github: 'https://github.com/ahmed-gomaa2/spotify.git',
         desc: 'spotify login and user interface.',
         skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'Spotify-clone',
+        link: 'https://spotify-b41cc.web.app/',
+        github: 'https://github.com/ahmed-gomaa2/spotify.git',
+        desc: 'spotify login and user interface.',
+        skills: ['ReactJS', 'Redux', 'firebase']
     }
 ];
 
 projects.map(p => {
-    const markup = `<div class="portfolio--projects-project">
+    const markup = `<div class="portfolio--projects-project fading">
                 <a href=${p.link} target="_blank" class="portfolio--projects-project-container">
                 </a>
             </div>`;
@@ -139,29 +187,52 @@ setTimeout(() => {
 }, 200);
 
 
-// Check if a new cache is available on page load.
-window.addEventListener('load', function(e) {
+/**************************************************************************************/
+/********************************* Revealing Sections Observer ************************/
+/**************************************************************************************/
+const allNeadsToBeRevealed = document.querySelectorAll('.fading');
 
-    window.applicationCache.addEventListener('updateready', function(e) {
-        if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-            // Browser downloaded a new app cache.
-            // Swap it in and reload the page to get the new hotness.
-            window.applicationCache.swapCache();
-            if (confirm('A new version of this site is available. Load it?')) {
-                window.location.reload();
-            }
-        } else {
-            // Manifest didn't changed. Nothing new to server.
+// const revealSection = (entries, observer) => {
+//     const [entry] = entries;
+//
+//     console.log(entry)
+//
+//     if(!entry.isIntersecting) return;
+//
+//     entry.target.classList.remove('fading');
+//
+//     observer.unobserve(
+//         entry.target
+//     )
+// }
+//
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//     root: null,
+//     threshold:.3
+// });
+//
+// // console.log(allNeadsToBeRevealed);
+//
+// allNeadsToBeRevealed.forEach(sec => {
+//     sectionObserver.observe(sec);
+//     sec.classList.add('fading');
+// });
+
+const isInViewport = el => {
+    const rect = el.getBoundingClientRect();
+    console.log(rect.bottom, window.innerHeight);
+    return (
+        rect.top < window.innerHeight - 50
+    )
+}
+
+document.addEventListener('scroll', () => {
+    allNeadsToBeRevealed.forEach(el => {
+        if(isInViewport(el)) {
+            el.classList.remove('fading');
         }
-    }, false);
-
-}, false);
-
-
-
-
-
-
+    });
+})
 
 
 
