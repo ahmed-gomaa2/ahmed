@@ -80,7 +80,7 @@ skills.map(s => {
 const projects = [
     {
         name: 'messenger-clone',
-        link: 'http://3.80.44.161/',
+        link: 'https://messenger-clone-app.herokuapp.com/',
         github: 'https://github.com/ahmed-gomaa2/massenger',
         desc: 'Chat using test and images.',
         skills: ['NodeJS', 'MySql', 'ReactJS', 'Redux', 'SocketIO']
