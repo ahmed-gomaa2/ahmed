@@ -91,6 +91,13 @@ const projects = [
         github: 'https://github.com/ahmed-gomaa2/spotify.git',
         desc: 'spotify login and user interface.',
         skills: ['ReactJS', 'Redux', 'firebase']
+    },
+    {
+        name: 'book-store',
+        link: 'https://hilarious-pastelito-5bcedf.netlify.app/',
+        github: 'https://github.com/ahmed-gomaa2/bookstore',
+        desc: 'application to consume the google book api.',
+        skills: ['ReactJS', 'Redux', 'Sass']
     }
 ];
 
